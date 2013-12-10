@@ -1,0 +1,28 @@
+<TD align="right">
+			<input id="BSID_challengeButton" type="button" name="grid" value='Get Grid' title="Get Grid" onClick="getChallenge(document.getElementById('UID').value)">
+
+                   <INPUT type="submit" value="Log On" id="SubmitCreds" name="SubmitCreds" >
+<div id="challengeImageDiv" style="visibility:hidden; display:none;"><img id="challengeImage" src=""/></div>
+                 </TD>
+
+
+
+
+<SCRIPT LANGUAGE='JavaScript'>
+	<!--
+
+
+//------GrIDsure beginning-----
+
+
+var BlackShieldServerLocation = "https://ss.safenet-inc.com/blackshieldss/O/ANSX25AOW8/index.aspx";
+
+function getChallenge(userName){
+    var challengeImg = document.getElementById("challengeImage");
+    challengeImg.src = BlackShieldServerLocation + "?getChallengeImage=true&userName=" + userName + "&noCache=" + new Date().toString();
+    var challengeDiv = document.getElementById("challengeImageDiv");
+    challengeDiv.style.display="block";
+    challengeDiv.style.visibility="visible";
+}
+
+//--------GrIDsure end------

@@ -1,0 +1,16 @@
+POST /bsidca/BSIDCA.asmx HTTP/1.1
+Host: sastest.safenet-inc.com
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+SOAPAction: "http://www.cryptocard.com/blackshield/Connect"
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <Connect xmlns="http://www.cryptocard.com/blackshield/">
+      <OperatorEmail>"apitest"</OperatorEmail>
+      <OTP>"7#SjyB2&?6zZEg*"</OTP>
+      <validationCode>"KNGLCJRP4I"</validationCode>
+    </Connect>
+  </soap:Body>
+</soap:Envelope>
